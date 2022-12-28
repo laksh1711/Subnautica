@@ -42,6 +42,7 @@ AFRAME.registerComponent("game-play", {
   },
   isCollided: function (elemntId) {
     var element = document.querySelector(elemntId);
+
     element.addEventListener("collide", (e) => {
       if (elemntId.includes("#coin")) {
         element.setAttribute("visible", false);
@@ -64,6 +65,7 @@ AFRAME.registerComponent("game-play", {
   },
   updateScore: function () {
     var element = document.querySelector("#score");
+
     var count = element.getAttribute("text").value;
     var currentScore = parseInt(count);
     currentScore += 50;
